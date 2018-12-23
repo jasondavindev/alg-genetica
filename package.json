@@ -1,10 +1,10 @@
 {
-  "name": "Genetica",
+  "name": "genetica",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:memory_limit": "node --stack_size=8192 --max-old-space-size=8192 index",
+    "start:memory_limit": "node --stack_size=8192 --max-old-space-size=8192 index"
   },
   "keywords": [],
   "author": "",
