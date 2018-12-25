@@ -30,13 +30,15 @@ class Principal {
 
 	static fazerMutacao(populacao, vetCards, vetLojas) {
 		let contador = 0;
+		const numeroLojas = vetLojas.length;
+		const chanceMutacao = parseInt(Math.random() * 100);
 
 		const tempo = Date.now();
 
 		do {
 			let pais = Selecao.selecionarPais(populacao, 2);
 			let filhos = Cruzamento.gerarFilhos(pais);
-			let condMut = Mutacao.fazerMutacao(filhos, 1, 1, pais[0].getNumeroGenes(), vetCards);
+			let condMut = Mutacao.mutacaoClassica(filhos, chanceMutacao, 2, numeroLojas, vetCards);
 			let condInsert = Insercao.inserirNaPopulacao(
 				populacao,
 				pais,
