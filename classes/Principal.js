@@ -36,7 +36,7 @@ class Principal {
 		do {
 			let pais = Selecao.selecionarPais(populacao, 2);
 			let filhos = Cruzamento.gerarFilhos(pais);
-			let condMut = Mutacao.fazerMutacao(filhos, 1, 1, 86, vetCards);
+			let condMut = Mutacao.fazerMutacao(filhos, 1, 1, pais[0].getNumeroGenes(), vetCards);
 			let condInsert = Insercao.inserirNaPopulacao(
 				populacao,
 				pais,
